@@ -20,7 +20,7 @@ body {
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 40px; */
   /* display: inline-block; */
 }
@@ -30,7 +30,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -101,7 +101,7 @@ li {
   font-weight: bold;
 }
 
-.related-posts {
+.related {
   list-style: none;
   margin-left: 0;
 }
@@ -146,7 +146,7 @@ a:active {
 
 nav a:link {
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
 
@@ -181,7 +181,7 @@ h2::after {
 }
 
 /* FLOATS */
-.author-img {
+/* .author-img {
   float: left;
   margin-bottom: 10px;
 }
@@ -200,9 +200,9 @@ nav {
   float: right;
 }
 
-/* .clear {
+.clear {
   clear: both;
-} */
+}
 
 .clearfix::after {
   content: "";
@@ -222,4 +222,87 @@ aside {
 
 footer {
   clear: both;
+} */
+
+/* Flexbox */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* FLEXBOX LAYOUT */
+/* .row {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+article {
+  flex: 1;
+  margin-bottom: 0px;
+}
+aside {
+  flex: 0 0 300px;
+} */
+
+/*  CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
+}
+
+article {
+  /* margin-bottom: 0px; */
+}
+
+aside {
+  /* align-items: ; */
+}
+
+footer {
+  grid-column: 1 / -1;
 }
